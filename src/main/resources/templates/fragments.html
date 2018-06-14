@@ -26,6 +26,11 @@
             </div>
         </div>
     </div>
+    <table th:fragment="table" th:each="job : ${jobs}" class="job-listing">
+        <tbody >
+        <tr th:each="field : ${job}" ><td th:text="${field.key}"></td><td th:text="${field.value}"></td></tr>
+        </tbody>
+    </table>
 
 </body>
 </html>
